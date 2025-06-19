@@ -2,7 +2,7 @@ export const embedColor = 10535045; // Color for main embeds
 export const errorEmbedColor = 16716032; // Color for error embeds
 export const guild = "1384898923558342777"; // ID of the store's Discord guild (server)
 
-export const channel = "1384928324664426657"; // Channel where the embed for creating tickets will be sent
+export const channel = "1385308867050602546"; // Channel where the embed for creating tickets will be sent
 export const feedback_channel = "1384906463025168425"; // Channel for feedback messages
 export const ticketsLogs_channel = "1384928647361855631"; // Channel for logging after a ticket is closed
 
