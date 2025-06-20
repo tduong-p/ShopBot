@@ -34,12 +34,12 @@ const event: BotEvent = {
         }, 10_000);
 
         // Schedule weekly cleanup of orders every Sunday at midnight
-        cron.schedule('0 0 * * 0', async () => {
-            await OrderModel.deleteMany({});
-        }, {
-            scheduled: true,
-            timezone: "Europe/Moscow"
-        });
+        // cron.schedule('0 0 * * 0', async () => {
+        //     await OrderModel.deleteMany({});
+        // }, {
+        //     scheduled: true,
+        //     timezone: "Europe/Moscow"
+        // });
     }
 };
 

@@ -35,6 +35,7 @@ export interface IOrder extends mongoose.Document {
     name: string;
     valute: string;
     price: number;
+    cost: number;
     buyer: string;
 }
 

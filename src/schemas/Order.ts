@@ -6,6 +6,7 @@ const OrderSchema = new Schema<IOrder>({
     name: { type: String, required: true },
     valute: { type: String, required: true },
     price: { type: Number, required: true },
+    cost: { type: Number, required: true },
     buyer: { type: String, required: true },
 })
 

@@ -142,7 +142,15 @@ Cập nhập thêm sau Soft Opening...`,
                             .setCustomId('product_price')
                             .setStyle(TextInputStyle.Short)
                             .setLabel("Final Price")
-                            .setPlaceholder('e.g., 1000₽')
+                            .setPlaceholder('e.g., 1000 (1k vnd)')
+                            .setRequired(true),
+                    ),
+                    new ActionRowBuilder<TextInputBuilder>().addComponents(
+                        new TextInputBuilder()
+                            .setCustomId('product_cost')
+                            .setStyle(TextInputStyle.Short)
+                            .setLabel("Cost")
+                            .setPlaceholder('e.g., 1000 (1k vnd)')
                             .setRequired(true),
                     )
                 ]);
