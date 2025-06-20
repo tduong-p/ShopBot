@@ -137,7 +137,7 @@ Cập nhập thêm sau Soft Opening...`,
 
             // Cập nhật lại message ban đầu chứa menu để reset lựa chọn
             await interaction.update({
-            content: "Vui lòng chọn lại nếu cần.",
+            content: "",
             components: [resetRow]
             });
 
