@@ -1,16 +1,18 @@
 import {
-    ActionRowBuilder,
-    type ButtonInteraction,
-    ButtonStyle,
-    ChannelType,
-    PermissionFlagsBits,
-    TextChannel,
-    ButtonBuilder,
-    DMChannel,
-    type StringSelectMenuInteraction,
-    ModalBuilder,
-    TextInputBuilder,
-    TextInputStyle
+  ActionRowBuilder,
+  ButtonBuilder,
+  ButtonStyle,
+  ChannelType,
+  PermissionFlagsBits,
+  TextChannel,
+  DMChannel,
+  StringSelectMenuBuilder,
+  StringSelectMenuOptionBuilder,
+  type StringSelectMenuInteraction,
+  ModalBuilder,
+    type ButtonInteraction, 
+  TextInputBuilder,
+  TextInputStyle
 } from 'discord.js';
 
 import * as config from '../../config';
@@ -19,7 +21,6 @@ import UserModel from '../../schemas/User';
 
 export default class Shop {
     async buy(interaction: StringSelectMenuInteraction, type: string) {
-        await interaction.deferReply({ ephemeral: true });
 
         let entry = await UserModel.findOne({ _id: String(interaction.user.id!) }).exec();
 
@@ -111,7 +112,41 @@ Cập nhập thêm sau Soft Opening...`,
         });
 
         await ticket.messages.pin(message);
-        return await interaction.editReply({ content: `Đơn hàng đã được tạo! Bạn có thể đặt câu hỏi ở ${ticket}` });
+        const resetMenu = new StringSelectMenuBuilder()
+            .setCustomId("product_select")
+            .setPlaceholder("Bạn cần hỗ trợ gì?")
+            .addOptions(
+                new StringSelectMenuOptionBuilder()
+                .setLabel("Mua hàng")
+                .setValue("order")
+                .setEmoji(config.emojis.nitro)
+                .setDescription("Mua hàng"),
+                new StringSelectMenuOptionBuilder()
+                .setLabel("Hỗ trợ")
+                .setValue("help")
+                .setEmoji(config.emojis.support)
+                .setDescription("Liên hệ nhân viên hỗ trợ"),
+                new StringSelectMenuOptionBuilder()
+                .setLabel("Giveaway")
+                .setValue("get_prise")
+                .setEmoji(config.emojis.nitrogift)
+                .setDescription("Nhận giải giveaway") // hoặc thay = "🎁" nếu không có emoji
+            );
+
+            const resetRow = new ActionRowBuilder<StringSelectMenuBuilder>().addComponents(resetMenu);
+
+            // Cập nhật lại message ban đầu chứa menu để reset lựa chọn
+            await interaction.update({
+            content: "Vui lòng chọn lại nếu cần.",
+            components: [resetRow]
+            });
+
+            // Gửi tin nhắn riêng cho user
+            await interaction.followUp({
+            ephemeral: true,
+            content: `Đơn hàng đã được tạo! Bạn có thể đặt câu hỏi ở ${ticket}`
+            });
+
     }
 
     async buy_close(interaction: ButtonInteraction) {
