@@ -41,7 +41,7 @@ export default class Ready {
                 {
                     color: 10535045,
                     image: {
-                        url: "https://cdn.discordapp.com/attachments/1384928324664426657/1385254878342942811/image.png?ex=685566a3&is=68541523&hm=48a0bbc4bddbd2b52d4cbc391cc0134b1e646910a9439a4bacd99a9523e7c191&"
+                        url: "https://media.discordapp.net/attachments/1384928324664426657/1385555340199854171/1.png?ex=68567e77&is=68552cf7&hm=2c52c371d8a59d64ae37e909324b2854ac9ad330b9fac8244c16c91aef0acc33&=&format=webp&quality=lossless&width=2784&height=1152"
                     }
                 },
             ],
