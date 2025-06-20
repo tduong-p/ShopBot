@@ -98,15 +98,8 @@ export default class Shop {
                 },
                 {
                     description: `### Vui lòng mô tả chi tiết sản phẩm hoặc dịch vụ. Đội ngũ của chúng tôi sẽ phản hồi sớm nhất.    \n
-### Sample categories:
-<#1194041777414488204> - <:nitro:1247791703679565824> \`nitro\` and subscriptions
-<#1247514887731544106> - <:designer:1247791695152812154> \`design\` server packs
-<#1247518170973999125> - <:designer:1247791695152812154> \`design\` profiles
-<#1247518273449361488> - <:designer:1247791695152812154> \`design\` animations
-<#1248266505913766090> - <:education:1247791706607456289> \`server\` packs
-<#1248273243845169314> - <:developer:1247791698663313429> \`developer\` bots and programs
-<#1248266773602500679> - <:education:1247791706607456289> \`server\` resources
-<#1248270497867628606> - <:education:1247791706607456289> \`server\` staff training`,
+<#1385514987216310272> - <:BOOST~1:1385557388806848582> \`nitro\` and subscriptions
+Cập nhập thêm sau Soft Opening...`,
                     color: 10535045,
                     image: {
                         url: "https://cdn.discordapp.com/attachments/847745581329940481/1094248142741979186/image.png"
