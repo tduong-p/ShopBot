@@ -98,7 +98,7 @@ export default class Shop {
                 },
                 {
                     description: `### Vui lòng mô tả chi tiết sản phẩm hoặc dịch vụ. Đội ngũ của chúng tôi sẽ phản hồi sớm nhất.    \n
-<#1385514987216310272> - <a:NITRO:1385554425548115979> \`nitro\` and subscriptions
+<#1385514987216310272> - <:001_angle:1385562886323310643> \`nitro\` and subscriptions
 Cập nhập thêm sau Soft Opening...`,
                     color: 10535045,
                     image: {
